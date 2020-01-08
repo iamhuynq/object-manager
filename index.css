@@ -1,0 +1,127 @@
+.grid,
+.grid * {
+  box-sizing: border-box;
+}
+.grid {
+  position: absolute;
+  top: 40px;
+  left: 13px;
+}
+.grid-chooser + .grid {
+  display: none;
+  background: white;
+}
+
+.grid-chooser:focus + .grid {
+  display: block;
+}
+
+.grid-chooser + .grid .row:first-child .square:first-child .inner {
+  background: rgb(175, 190, 199);
+}
+
+.grid-chooser + .grid .square:first-child {
+  margin-top: 0;
+}
+
+.grid-chooser + .grid .square {
+  height: 100%;
+  float: left;
+  padding: 1px;
+}
+.grid-chooser + .grid .square:hover .inner,
+.grid-chooser + .grid .square.highlight .inner {
+  background: rgb(175, 190, 199);
+}
+
+.inner {
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+  background: rgb(0, 0, 0);
+}
+.context-menu-list {
+  z-index: 100 !important;
+}
+#test {
+  width: 1700px;
+  min-height: 1000px;
+  border: 1px solid black;
+  position: relative;
+  overflow: hidden;
+  height: auto;
+}
+
+td {
+  border: 1px solid black;
+}
+
+.tooltip-inner {
+  max-width: 300px;
+  width: 300px;
+}
+
+ul {
+  text-align: left;
+}
+
+legend {
+  text-align: left;
+  margin-left: 38px;
+  padding-left: 10px;
+  width: 10% !important;
+}
+
+.guide {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#guide-h {
+  border-top: 1px dashed #55f;
+  width: 100%;
+}
+
+#guide-v {
+  border-left: 1px dashed #55f;
+  height: 100%;
+}
+.topline {
+  position: absolute;
+  width: 100000%;
+  border-top: 1px #55f dashed;
+  vertical-align: middle;
+  margin-top: -1px;
+  margin-left: -50000%;
+  display: none;
+}
+.botline {
+  position: absolute;
+  width: 100000%;
+  bottom: -2px;
+  border-bottom: 1px #55f dashed;
+  display: none;
+  vertical-align: middle;
+  margin-top: 500px;
+  margin-left: -50000%;
+}
+.leftline {
+  position: absolute;
+  height: 1000000%;
+  left: -1px;
+  border-left: 1px #55f dashed;
+  display: none;
+  vertical-align: middle;
+  margin-top: -50000%;
+}
+.rightline {
+  position: absolute;
+  height: 1000000%;
+  right: -1px;
+  border-right: 1px #55f dashed;
+  display: none;
+  vertical-align: middle;
+  margin-top: -50000%;
+}

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{.title}}</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.css">
+    <link rel="stylesheet" type="text/css" 
+	href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css"/>
+</head>
+<body>
+    <!-- header -->
+    <nav class="navbar navbar-light fixed-top bg-light flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Vista</a>
+        <div class="mr-2 ml-auto dropdown" id="navList"></div>
+        <button class="btn btn-danger mr-2" onclick="window.location.href='/members'">Admin</button>
+        <button class="btn btn-dark mr-2" onclick="window.location.href='/logout'">Logout</button>
+    </nav>
+    <!-- end header -->
+
+    <!-- content -->
+    <div class="container-fluid">
+        <h4>Add Seat</h4>
+        <div class="form-group row">
+            <label class="col-sm-1 col-form-label">Title</label>
+            <input type="text" class="form-control col-sm-11">
+        </div>
+        <div class="form-group row">
+                <label class="col-sm-1 col-form-label">Company</label>
+                <select class="col-sm-2">
+                          <option>Tribal Media House</option>
+                          <option>TMH-Techlab</option>
+                      </select>
+              </div>
+        <div class="form-group row">
+                <label class="col-sm-1 col-form-label">Seat</label>
+            <input type="number" class="d-none" id="number_col" value="1">
+            <input type="number" class="d-none" id="number_row" value="1">
+            <div class="col-sm-2 mr-2" style="position: relative;z-index:1000;padding-left:0px;">
+                <input type="text" readonly value="1 x 1" class="form-control grid-chooser"/>
+            </div>
+            <button class="btn btn-outline-secondary" id="seat_add">Add Seat</button>
+            <button class="btn btn-secondary ml-2 d-none" id="seat_update">Update seat</button>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label class="col-form-label">Object</label>
+            </div>
+            <button class="btn btn-outline-secondary" id="obj_add">Add Object</button>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label class="col-form-label">Door</label>
+                
+            </div>
+            <select id="door_input" class="form-control col-sm-1">
+                <option value="t">Top</option>
+                <option value="r">Right</option>
+                <option value="b">Bottom</option>
+                <option value="l">Left</option>
+            </select>
+            <button class="btn btn-outline-secondary ml-2" id="door_add">Add Door</button>
+        </div>
+        <!-- <form> -->
+        <div id="test">
+            
+        </div>
+
+        <!--  </form> -->
+        <div class="row mt-4" style="height:100px">
+            <div class="col-sm-6 text-right">
+                <button class="btn btn-primary w-25" onclick="confirmBack()">Back</button>
+            </div>
+            <div class="col-sm-6 text-left">
+                <button class="btn btn-primary w-25">Save</button>
+            </div>
+        </div>
+    </div>
+    <!-- end content -->
+
+    <!-- footer -->
+    <nav class="navbar navbar-light fixed-bottom bg-light flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#" style="font-size:16px;">Copyright © Tribal Media House
+            Technology Lab Co., Ltd. All rights reserved</a>
+    </nav>
+    <!-- end footer -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!--<script src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.ui.position.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
